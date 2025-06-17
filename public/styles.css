@@ -92,7 +92,7 @@ body {
 }
 
 .about h2,
-.services h2 {
+.services h2,.servicios {
   color: #f00;
   margin-bottom: 20px;
 }
@@ -222,6 +222,16 @@ footer {
   border-radius: 8px;
   overflow: hidden;
   max-width: 40%;
+}
+.divider {
+  border: 0;
+  height: 2px;
+  background-color: #008CFF; 
+  margin: 30px 0; 
+}
+
+.servicios{
+    text-align: center;
 }
 
 /* MEDIA QUERIES - RESPONSIVE */
