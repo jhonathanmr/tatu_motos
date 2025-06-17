@@ -29,3 +29,36 @@ document.getElementById('prevSlide').addEventListener('click', () => showSlide(c
 setInterval(() => {
   showSlide(currentSlide + 1);
 }, 10000); // cada 10 segundos
+
+function preventOpenNewTab(galleryItems) {
+  galleryItems.forEach(item => {
+    // Si el elemento es un enlace, prevenir la acción predeterminada
+    const link = item.querySelector("a");
+    if (link) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();  // Esto previene que el enlace abra una nueva ventana
+      });
+    }
+
+    // Si el contenido es un video, prevenir la acción predeterminada
+    const video = item.querySelector("video");
+    if (video) {
+      video.addEventListener("click", (e) => {
+        e.preventDefault();  // Esto previene que se abra una nueva ventana
+        e.stopPropagation(); // Esto evita que el evento se propague al modal
+      });
+    }
+
+    // Si el contenido es una imagen, prevenir la acción predeterminada
+    const img = item.querySelector("img");
+    if (img) {
+      img.addEventListener("click", (e) => {
+        e.preventDefault();  // Esto previene que se abra una nueva ventana
+      });
+    }
+  });
+}
+
+// Llamar a la función pasando los elementos de la galería
+const galleryItems = document.querySelectorAll('.gallery-item');
+preventOpenNewTab(galleryItems);
