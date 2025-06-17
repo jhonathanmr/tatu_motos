@@ -7,19 +7,23 @@
   <link rel="stylesheet" href=public/styles.css>
 </head>
 <body>
- <header>
+ <header class="header">
   <div class="logo-placeholder">
-    <img src="public/Imagen_de_WhatsApp_2025-06-16_a_las_17.10.37_caa7c7c0-removebg-preview.png" alt="Logo Tatu Motos" class="logo-img">
+    <img src="public/Imagen_de_WhatsApp_2025-06-16_a_las_17.10.37_caa7c7c0-removebg-preview.png" alt="Logo Tatu Motos" class="logo-img" />
   </div>
-  <section class="main-content" id="inicio">
+  <div class="main-content" id="inicio">
     <h1>Bienvenido a Tatu Motos</h1>
     <p>Tu taller de confianza para reparación, mantenimiento y personalización de motos.</p>
-  </section>
-  <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
+  </div>
+  <nav class="header-nav">
+    <ul class="nav-list">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
   </nav>
 </header>
+
 
 <section class="about" id="acerca">
   <h2>Acerca de Nosotros</h2>
@@ -71,7 +75,20 @@
   <section class="contact" id="contacto">
     <h2>Contáctanos</h2>
     <p>Estamos disponibles para ayudarte con tu moto.</p>
-    <p> Encuentanos en la siguiente Dirección carrera 4 # 10b12   </p>
+    <p>Encuéntranos en la siguiente dirección: carrera 4 #10b12</p>
+
+<!-- Mapa de Google Maps -->
+<div class="map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3975.729682123685!2d-75.68944172502!3d4.816410095159052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDgnNTkuMSJOIDc1wrA0MScxMi43Ilc!5e0!3m2!1ses!2sco!4v1750175640485!5m2!1ses!2sco" 
+  width="100%" 
+  height="400" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
     <button id="whatsapp-btn">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
   Escríbenos por WhatsApp
